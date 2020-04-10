@@ -1,0 +1,1158 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+header {
+	position: absolute;
+	width: 100%;
+	height: 80px;
+	padding: 10px;
+	background: #262626;
+	box-sizing: border-box;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header .logo img {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 20%;
+	left: 1.5%;
+}
+
+nav {
+	float: right;
+}
+
+.clearfix {
+	clear: both;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+nav ul li {
+	list-style: none;
+
+}
+
+nav ul li a {
+	display: block;
+	margin: 10px 0;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: #fff;
+}
+
+nav ul li a:hover {
+	background: #069370;
+	color: #262626;
+	transition: 0.5s;
+}
+
+
+.container {
+	position: absolute;
+	top: 80px;
+	overflow: hidden;
+	width: 90%;
+	left: 5%;
+	height: 400px;
+}
+
+.container .slider {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 500%;
+	height: 100%;
+	float: left;
+	animation: animate 10s linear infinite;
+}
+
+.container .slider .slide {
+	position: relative;
+	width: 20%;
+	height: 100%;
+	float: left;
+
+}
+
+/*.container .slider .slide .caption {
+	position: absolute;
+	bottom: 60px;
+	left: 60px;
+	right: 60px;
+	padding: 30px;
+	background: rgba(0,0,0,0.5);
+	box-sizing: border-box;
+}*/
+
+.container .slider .slide .caption h3 {
+	margin: 0 0 20px;
+	padding: 0;
+	color: #fff;
+	font-size: 48px;
+}
+
+.container .slider .slide.slide1 {
+	background: url(images/1.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.container .slider .slide.slide2 {
+	background: url(images/2.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.container .slider .slide.slide3 {
+	background: url(images/3.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.container .slider .slide.slide4 {
+	background: url(images/4.png);
+	background-size: cover;
+	background-position: center;
+}
+
+@keyframes animate {
+	0% {
+		left: 0;
+	}
+
+	20% {
+		left: 0;
+	}
+
+	25% {
+		left: -100%;
+	}
+
+	45% {
+		left: -100%;
+	}
+
+	50% {
+		left: -200%;
+	}
+
+	70% {
+		left: -200%;
+	}
+
+	75% {
+		left: -300%;
+	}
+
+	95% {
+		left: -300%;
+	}
+
+	100% {
+		left: -400%;
+	}
+}
+
+.ssay {
+	position: absolute;
+	top: 540px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 2em;
+	font-style: 'comic sans MS';
+}
+
+.searchBox {
+    position: absolute;
+    top: 550px;
+    left: 50%;
+    transform:  translate(-50%,50%);
+    background: #262626;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+
+}
+
+.searchBox:hover .searchInput {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.searchBox:hover .searchButton {
+  background: white;
+  color : #262626;
+}
+
+.searchButton {
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    outline: none;
+    cursor: pointer;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+}
+}
+
+.booking {
+	position: absolute;
+	top: 700px;
+	height: 600px;
+	width: 90%;
+	left: 5%;
+	border-radius: 30px;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.6);	
+}
+
+.booking .book {
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	left: 0;
+	top: 0;
+	background: transparent;
+	border-top-left-radius: 30px; 
+	border-bottom-left-radius: 30px;
+}
+
+.booking .cities {
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	right: 0;
+	top: 0;
+	background: #f6f6f6;
+	border-top-right-radius: 30px; 
+	border-bottom-right-radius: 30px;
+}
+
+.booking .book .register {
+	position: absolute;
+	width: 90%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.booking .book .register form {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+
+.booking .book .register select {
+	height: 40px;
+	width: 300px;
+	outline: none;
+}
+
+.booking .book .register form input[type="date"] {
+	height: 30px;
+	width: 140px;
+	outline: none;
+	border: 1px solid grey;
+	border-radius: 5px;
+	background: #f8f8f8;
+}
+
+.booking .book .register form .ddate {
+	position: absolute;
+	left: 52%;
+	top: 94px;
+}
+
+.booking .book .register form input[type="time"] {
+	height: 30px;
+	width: 140px;
+	outline: none;
+	border: 1px solid grey;
+	border-radius: 5px;
+	background: #f8f8f8;
+}
+
+.booking .book .register form .dtime {
+	position: absolute;
+	left: 52%;
+	top: 253px;
+}
+
+.booking .book .register form button {
+	height: 40px;
+	width: 300px;
+	background: #f8f8f8;
+	border: 1px solid grey;
+	border-radius: 10px;
+	outline: none;
+}
+
+
+.booking .book .comment {
+	position: absolute;
+	top: 10%;
+	left: 55%;
+	width: 70%;
+	transform: translate(-50%,-50%);
+	font-size: 2em;
+}
+
+.booking .cities .comment2 {
+	position: absolute;
+	top: 10%;
+	left: 52%;
+	width: 80%;
+	transform: translate(-50%, -50%);
+	font-size: 2em;
+}
+
+.booking .cities .wrapper {
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 90%;
+	height: 400px;
+}
+
+.booking .cities .wrapper .content1 {
+	background: #262626;
+	height: 45%;
+	width: 45%;
+	top: 0;
+	left: 0;
+}
+
+.booking .cities .wrapper .content1:hover {
+	box-shadow: 0 5px 10px rgba(0,0,0,0.6);
+	transition: 0.5s;		
+}
+
+
+.booking .cities .wrapper .content1 .image1 img {
+	position: absolute;
+	height: 60px;
+	width: auto;
+	top: 10%;
+	left: 11%;
+	transform: translate(-50%, -50%);
+}
+
+.booking .cities .wrapper .content1 .heading1 {
+	position: absolute;
+	color: #fff;
+	top: 7%;
+	left: 27%;
+}
+
+
+.booking .cities .wrapper .content2 {
+	background: #262626;
+	position: absolute;
+	height: 45%;
+	width: 45%;
+	top: 0;
+	left: 50%;
+}
+
+.booking .cities .wrapper .content2:hover {
+	box-shadow: 0 5px 10px rgba(0,0,0,0.6);
+	transition: 0.5s;		
+}
+
+.booking .cities .wrapper .content2 .image2 img {
+	position: absolute;
+	height: 60px;
+	width: auto;
+	top: 23%;
+	left: 25%;
+	transform: translate(-50%, -50%);
+}
+
+.booking .cities .wrapper .content2 .heading2 {
+	position: absolute;
+	color: #fff;
+	top: 17%;
+	left: 57%;
+}
+
+.booking .cities .wrapper .content3 {
+	background: #262626;
+	position: absolute;
+	height: 45%;
+	width: 45%;
+	top: 50%;
+	left: 0;
+}
+
+.booking .cities .wrapper .content3:hover {
+	box-shadow: 0 5px 10px rgba(0,0,0,0.6);
+	transition: 0.5s;		
+}
+
+.booking .cities .wrapper .content3 .image3 img {
+	position: absolute;
+	height: 60px;
+	width: auto;
+	top: 23%;
+	left: 25%;
+	transform: translate(-50%, -50%);
+}
+
+.booking .cities .wrapper .content3 .heading3 {
+	position: absolute;
+	color: #fff;
+	top: 17%;
+	left: 57%;
+}
+
+.booking .cities .wrapper .content4 {
+	background: #262626;
+	position: absolute;
+	height: 45%;
+	width: 45%;
+	top: 50%;
+	left: 50%;	
+}
+
+.booking .cities .wrapper .content4:hover {
+	box-shadow: 0 5px 10px rgba(0,0,0,0.6);
+	transition: 0.5s;		
+}
+
+.booking .cities .wrapper .content4 .image4 img {
+	position: absolute;
+	height: 60px;
+	width: auto;
+	top: 23%;
+	left: 25%;
+	transform: translate(-50%, -50%);
+}
+
+.booking .cities .wrapper .content4 .heading4 {
+	position: absolute;
+	color: #fff;
+	top: 17%;
+	left: 52%;
+}
+
+
+
+.contact {
+	position: absolute;
+	top: 1370px;
+	height: 450px;
+	width: 100%;
+	background: #262626;
+}
+
+.contact .line {
+	position: absolute;
+	height: 350px;
+	width: 1px;
+	background: grey;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.contact .map {
+	position: absolute;
+	height: auto;
+	width: 100%;
+	top: 50%;
+	left: 55%;
+	transform: translate(-50%, -50%);
+}
+
+.contact .cform {
+	position: absolute;
+	top: 50%;
+	left: 70%;
+	transform: translate(-50%, -50%);
+}
+
+.contact .cform form input {
+	height: 10px;
+	width: 300px;
+	padding: 20px;
+	color: #fff;
+	background: transparent;
+	border: 1px solid grey;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-top-color: transparent;
+	border-bottom-color: 1px solid grey;
+	outline: none;
+}
+
+.contact .cform form button {
+	height: 40px;
+	width: 340px;
+	color: #fff;
+	background: transparent;
+	border: 1px solid grey;
+	outline: none;
+}
+
+.contact .cform form button:hover {
+	border: 1px solid cyan;
+	transition: 0.5s;
+}
+
+
+.contact .cform form input:focus {
+	border: 1px solid cyan;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-top-color: transparent;
+	border-bottom-color: 1px solid cyan;
+	transition: 0.5s;
+}
+
+.contact .cform form textarea {
+	height: 10px;
+	width: 300px;
+	padding: 20px;
+	color: #fff;
+	background: transparent;
+	border: 1px solid grey;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-top-color: transparent;
+	border-bottom-color: 1px solid grey;
+	outline: none;
+}
+
+.contact .cform form textarea:focus {
+	border: 1px solid cyan;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-top-color: transparent;
+	border-bottom-color: 1px solid cyan;
+	transition: 0.5s;
+}
+
+.contact .copyright {
+	position: absolute;
+	top: 97%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #f6f6f6;
+}
+
+.signupcontainer {
+	position: absolute;
+	height: 650px;
+	width: 90%;
+	left: 50%;
+	top: 80%;
+	transform: translate(-50%, -50%);
+	background: #f6f6f6;
+	border-radius: 30px;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.6);
+}
+
+.signupcontainer .left {
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	border-right: 1px solid black;
+}
+
+.signupcontainer .left .sform {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.signupcontainer .left .sform input {
+	height: 20px;
+	width: 400px;
+	padding: 20px;
+	outline: none;
+	font-size: 1.1em;
+	background: transparent;
+	border: 1px solid grey;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: grey;
+}
+
+.signupcontainer .left .sform input:focus {
+	border: 1px solid cyan;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: cyan;
+	transition: 1s;
+}
+
+.signupcontainer .left .sform select {
+	height: 40px;
+	width: 440px;
+	outline: none;
+	font-size: 1em;
+}
+
+.signupcontainer .left .sform button {
+	height: 40px;
+	width: 440px;
+	outline: none;
+	font-size: 1.1em;
+	background: #f2f2f2;
+	border: 1px solid grey;
+	border-radius: 10px;
+}
+
+.signupcontainer .left .sform button:hover {
+	border: 1px solid cyan;
+	transition: 1s;
+}
+
+.signupcontainer .or {
+	position: absolute;
+	height: 90px;
+	width: 90px;
+	border: 1px solid black;
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #262626;
+}
+
+.signupcontainer h4 {
+	color: #ffffff;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.signupcontainer .right{
+	position: absolute;
+	left: 50%;
+	top: 0%;
+	height: 100%;
+	width: 50%;
+}
+
+.signupcontainer .right .othero {
+	position: absolute;
+	top: 5%;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	font-size: 1.8em;
+}
+
+.signupcontainer .right .osign {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.signupcontainer .right .osign button {
+	height: 40px;
+	width: 450px;
+	border: none;
+	outline: none;
+	font-size: 1.4em;
+}
+
+.signupcontainer .right .osign button:nth-child(2n+1):hover {
+	background: #3b5998;
+	color: #000;
+	transition: 0.5s;
+}
+
+.signupcontainer .right .osign button:nth-child(2n+1):hover i{
+	color: #000;
+}
+
+.signupcontainer .right .osign button:nth-child(2n+1) i {
+	color: #3b5998;
+}
+
+.signupcontainer .right .osign button:nth-child(2n):hover {
+	background: #db4437;
+	transition: 0.5s;
+}
+
+.signupcontainer .right .osign button:nth-child(2n):hover i{
+	color: #000;
+}
+
+.signupcontainer .right .osign button:nth-child(2n) i {
+	color: #db4437;
+}
+
+.space1 {
+	position: absolute;
+	top: 850px;
+	height: 100px;
+	width: 100%;
+	background: transparent;
+}
+
+.lform {
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 500px;
+	width: 75%;
+	background: #f6f6f6;
+	border-radius: 50px;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.6);
+}
+
+.lform .limage {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 35%;
+	background: #262626;
+	border-radius: 50px 0 0 50px;
+}
+
+.lform .l_in {
+	position: absolute;
+	top: 0;
+	left: 35%;
+	height: 100%;
+	width: 65%;
+}
+
+.lform .l_in .lsay {
+	position: absolute;
+	top: -10%;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	font-size: 2em;
+}
+
+.lform .l_in .l_form {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.lform .l_in .l_form input {
+	height: 10px;
+	width: 300px;
+	padding: 25px;
+	background: transparent;
+	border: 1px solid grey;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: grey;
+	outline: none;
+}
+
+.lform .l_in .l_form input:focus {
+	border: 1px solid cyan;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: cyan;
+	transition: 0.5s;
+}
+
+
+.lform .l_in .l_form .fa-user {
+	position: absolute;
+	top: 20px;
+	font-size: 1.4em;
+}
+
+.lform .l_in .l_form .fa-lock {
+	position: absolute;
+	top: 100px;	
+	font-size: 1.4em;
+}
+
+.lform .l_in .l_form button {
+	height: 40px;
+	width: 150px;
+	font-size: 1.4em;
+	background: transparent;
+	outline: none;
+	border-radius: 50px;
+}
+
+.lform .l_in .l_form button:hover {
+	color: #fff;
+	background: #262626;
+	transition: 0.5s;
+}
+
+.lform .l_in .l_form .l_link {
+	font-size: 0.8em;
+	color: grey;
+}
+
+.lform .l_in .l_form .l_link a {
+	color: grey;
+	text-decoration: none;
+}
+
+.lform .l_in .l_form .l_link a:hover {
+	cursor: pointer;
+}
+
+.searchBox1 {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform:  translate(-50%,50%);
+    background: #262626;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+
+}
+
+.searchBox1:hover .searchInput1 {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.searchBox1:hover .searchButton1 {
+  background: white;
+  color : #262626;
+}
+
+.searchButton1 {
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    outline: none;
+    cursor: pointer;
+}
+
+.searchInput1 {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+
+}
+
+@media screen and (max-width: 620px) {
+.searchBox1:hover > .searchInput1 {
+    width: 150px;
+    padding: 0 6px;
+}
+}
+
+.mainb {
+	position: absolute;
+	top: 500px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 400px;
+	width: 90%;
+	background: #f6f6f6;
+	border-radius: 30px;
+	box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+	overflow-y: scroll;
+}
+
+.mainb .con1 {
+	position: absolute;
+	left: 6%;	
+	height: 80%;
+	width: 25%;
+	border: 1px solid grey;
+	top: 10%;
+	border-radius: 20px;
+	background: #fff;
+}
+
+.mainb .con1:hover {
+	box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+	transition: 0.5s;
+}
+
+.mainb .con1 .mimg1 img {
+	position: absolute;
+	width: 80%;
+	height: 40%;
+	left: 10%;
+	top: 5%;
+}
+
+.mainb .con1 .heading1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 20px;
+}
+
+.mainb .con1 .location1 {
+	position: absolute;
+	top: 58%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 20px;
+}
+
+.mainb .con1 .date1 {
+	position: absolute;
+	width: 100%;
+	top: 65%;
+	left: 60%;
+	transform: translate(-50%, -50%);
+}
+
+.mainb .con1 .edit1 .review{
+	position: absolute;
+	top: 77%;
+	left: 30%;
+	transform: translate(-50%, -50%);
+	height: 35px;
+	width: 100px;
+	border: none;
+	background: #5e84da;
+	border-radius: 50px;
+}
+
+.mainb .con1 .edit1 .cancel{
+	position: absolute;
+	top: 77%;
+	left: 70%;
+	transform: translate(-50%, -50%);
+	height: 35px;
+	width: 100px;
+	border: none;
+	background: #fa6364;
+	border-radius: 50px;
+}
+
+.mainb .con2 {
+	position: absolute;
+	left: 37.5%;	
+	height: 80%;
+	width: 25%;
+	border: 1px solid grey;
+	top: 10%;
+	border-radius: 20px;
+	background: #fff;
+}
+
+.mainb .con2:hover {
+	box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+	transition: 0.5s;
+}
+
+.mainb .con2 .mimg2 img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80%;
+	height: 40%;
+	left: 10%;
+	top: 5%;
+}
+
+.mainb .con2 .heading2 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 20px;
+}
+
+.mainb .con2 .location2 {
+	position: absolute;
+	top: 58%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 20px;
+}
+
+.mainb .con2 .date2 {
+	position: absolute;
+	width: 100%;
+	top: 65%;
+	left: 60%;
+	transform: translate(-50%, -50%);
+}
+
+.mainb .con2 .edit2 .review{
+	position: absolute;
+	top: 77%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 35px;
+	width: 100px;
+	border: none;
+	background: #5e84da;
+	border-radius: 50px;
+}
+
+.mainb .con3 {
+	position: absolute;
+	left: 69%;	
+	height: 80%;
+	width: 25%;
+	border: 1px solid grey;
+	top: 10%;
+	border-radius: 20px;
+	background: #fff;
+}
+
+.mainb .con3:hover {
+	box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+	transition: 0.5s;
+}
+
+.mainb .con3 .mimg3 img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80%;
+	height: 40%;
+	left: 10%;
+	top: 5%;
+}
+
+.mainb .con3 .heading3 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 20px;
+}
+
+.mainb .con3 .location3 {
+	position: absolute;
+	top: 58%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 20px;
+}
+
+.mainb .con3 .date3 {
+	position: absolute;
+	width: 100%;
+	top: 65%;
+	left: 60%;
+	transform: translate(-50%, -50%);
+}
+
+.mainb .con3 .edit3 .review{
+	position: absolute;
+	top: 77%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 35px;
+	width: 100px;
+	border: none;
+	background: #5e84da;
+	border-radius: 50px;
+}
+
+.spacembook {
+	position: absolute;
+	top: 750px;
+	height: 50px;
+	width: 100%;
+}
+
+
+.mainb .con1 .txt1 {
+	position: absolute;
+	width: 100%;
+	top: 70%;
+	left: 55%;
+	transform: translate(-50%, -50%);
+}
+
+.mainb .con2 .txt2 {
+	position: absolute;
+	width: 100%;
+	top: 70%;
+	left: 55%;
+	transform: translate(-50%, -50%);
+}
+
+.mainb .con3 .txt3 {
+	position: absolute;
+	width: 100%;
+	top: 70%;
+	left: 55%;
+	transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
